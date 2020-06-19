@@ -1,0 +1,74 @@
+.stars {
+    width: 16.25em;
+    position: absolute;
+    height: 19em;
+    left: 2em;
+    bottom: 0;
+
+    &__img {
+
+        img{
+            position: absolute;
+        }
+    
+        &:first-child {
+            img {
+                width: 32%;
+                bottom: 32%;
+            }
+        }
+
+        &:nth-child(2) {
+            img {
+                width: 63%;
+                right: 0;
+            }
+        }
+
+        &:last-child {
+            img {
+                width: 37%;
+                bottom: 0;
+                right: 0;
+            }
+        }
+    }
+
+    &_rotate-y {
+        transform: rotateY(180deg);
+        bottom: 10em;
+        left:  8em;
+    }
+
+    &_rotate {
+        width: 11em;
+        height: 10em;
+        left: 50%;
+        top: -5em;
+        opacity: 0.3;
+        transform: matrix(-0.91, -0.41, -0.41, 0.91, 0, 0);
+
+        .stars__img {
+            &:first-child {
+                img {
+                    width: 20%;
+                    bottom: 60%;
+                }
+            }
+    
+            &:nth-child(2) {
+                img {
+                    width: 45%;
+                    right: 20%;
+                }
+            }
+    
+            &:last-child {
+                img {
+                    width: 25%;
+                }
+            }
+        }
+
+    }
+}

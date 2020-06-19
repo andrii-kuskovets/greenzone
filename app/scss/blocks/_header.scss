@@ -1,0 +1,62 @@
+.header {
+    position: relative;
+    margin: 2.5% 5%;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo {
+        position: relative;
+        width: 30%;
+        height: 100%;
+
+        img {
+            position: absolute;
+            top: -3em;
+            left: -2.5em;
+        }
+    }
+
+    &__title {
+        display: flex;
+        width: 85%;
+        justify-content: center;
+    }
+
+    &__subscription {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        width: 30%;
+    }
+
+    &__btns {
+        display: flex;
+        margin: 3em 0;
+    }
+
+    .social-networks {
+        display: flex;
+        align-items: flex-end;
+
+        &__item {
+            margin-right: 1.5em;
+        }
+
+        &__icon {
+            width: 1.5em;
+            height: 1.5em;
+            transform: perspective(1px) translateZ(0);
+
+            &:hover {
+                animation-name: skew;
+                animation-duration: 1s;
+                animation-timing-function: ease-in-out;
+                animation-iteration-count: 1;
+            }
+        }
+    }
+}

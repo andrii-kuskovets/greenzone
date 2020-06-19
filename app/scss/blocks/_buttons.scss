@@ -1,0 +1,67 @@
+.btn {
+    background-color: transparent;
+    border: 0;
+    display: inline-block;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    border: 0;
+    line-height: 1;
+    font-family: 'Poppins', serif;
+    border-style: solid;
+
+    &_main {
+        @include button-variant(1px, $red, transparent, $red, 500);
+        @include button-size(0.5em, 0.7em, 1.25em, 112px);
+        
+        &_md {
+            @include button-variant(3px, $white, transparent, $white, 500);
+            width: 184px;
+        }
+
+        &_lg {
+            @include button-variant(1px, $gold, transparent, $gold, normal);
+            width: 344px;
+            margin-left: auto;
+        }
+    }
+
+    &_fill {
+        @include button-variant(1px, $white, $red, $red, 500);
+        border-right: 0;
+    }
+
+    &_custom {
+        position: relative;
+        color: $red;
+        font-family: 'Playfair', serif;
+        font-weight: bold;
+        font-size: 1.25em;
+        padding: 0.9em 0;
+        background-color: $white;
+
+        &:after {
+            content: '';
+            border: 2px solid $red;
+            width: 177px;
+            height: 80px;
+            position: absolute;
+            left: 1.5em;
+            top: -0.7em;
+            z-index: -1;
+        }
+
+        &:before {
+            content: '';
+            background: url('../../img/Arrow.png') center (center / auto) no-repeat;
+            position: absolute;
+            bottom: -1.2em;
+            left: 50%;
+            height: 100%;
+            transform: translateX(-50%);
+            width: 100%;
+        }
+    }
+}

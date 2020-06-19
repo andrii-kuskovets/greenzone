@@ -1,0 +1,90 @@
+.clients {
+    position: relative;
+
+    &:after {
+        content: '';
+        background: linear-gradient(180deg, #464069 0%, rgba(118, 107, 175, 0) 37.79%);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: -16em;
+        left: 0;
+        z-index: -1;
+    }
+
+    .quote {
+        text-align: center;
+        margin-bottom: 5em;
+        
+        &__title {
+            display: inline-block;
+            text-align: right;
+            font-family: 'Playfair', serif;
+            font-weight: normal;
+            font-size: 3.125em;
+            color: $violet;
+        }
+
+        &__author {
+            font-size: 0.5em;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__banner {
+        width: 60%;
+    }
+
+    &__description {
+        width: 40%;
+        margin-left: 9em;
+    }
+
+    .big-logo {
+        position: relative;
+        max-width: 662px;
+        margin-left: -25%;
+    }
+
+    .awards {
+        display: flex;
+        width: 35%;
+
+        img+img {
+            margin-left: -5%;
+        }
+    }
+    
+    .list {
+        width: 100%;
+        margin-bottom: 3.75em;
+
+        &__item {
+            display: flex;
+            align-items: flex-start;
+            font-family: 'Poppins', serif;
+            font-size: 1.125em;
+            color: $violet;
+            line-height: 1.6875em;
+
+            a {
+                text-decoration: none;
+                color: inherit;
+            }
+        }
+
+        &__name {
+            width: 35%;
+            font-weight: normal;
+        }
+
+        &__info {
+            width: 65%;
+            font-weight: 500;
+        }
+    }
+}

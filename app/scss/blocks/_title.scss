@@ -1,0 +1,88 @@
+.title {
+    position: relative;
+    font-family: 'Poppins', serif;
+    font-weight: 600;
+    font-size: 1.5em;
+    color: $gold;
+    margin-bottom: 1em;
+    text-transform: uppercase;
+
+    &:before {
+        content: '';
+        position: absolute;
+        display: block;
+        border-width: 1px;
+        border-style: solid;
+        border-color: $dark-violet;
+        width: 4.7em;
+        height: 4.7em;
+        bottom: -0.8em;
+        left: -2.75em;
+        z-index: -1;
+    }
+
+    &:after {
+        content: '.';
+        font-family: 'Times New Roman', Times, serif;
+        margin-left: 0.5em;
+        font-size: inherit;
+        color: $dark-violet;
+    }
+
+    &_small {
+        font-size: 1.25em;
+    }
+
+    &_shadow {
+        margin-left: 1.5em;
+        color: $dark-violet;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+        &:before,
+        &:after {
+            content: none;
+        }
+    }
+
+    &_dark {
+        color: $violet;
+        margin-bottom: 4.5em;
+
+        &:before,
+        &:after {
+            border-color: $red;
+            color: $red;
+        }
+    }
+
+    &_right {
+        text-align: right;
+        margin-top: 5.5em;
+
+        &:before {
+            left: auto;
+            right: -2.75em;
+        }
+    }
+
+    &_white {
+        &:before,
+        &:after {
+            border-color: $white;
+            color: $white;
+        }
+    }
+}
+
+.subtitle {
+    font-family: 'Playfair', serif;
+    font-weight: bold;
+    font-size: 1.25em;
+    text-transform: uppercase;
+    color: $red;
+    margin-bottom: 1em;
+    
+    &_gold {
+        color: $gold;
+    }
+}
